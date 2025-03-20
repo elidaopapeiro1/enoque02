@@ -57,7 +57,7 @@
             overflow: hidden;
         }
         .progresso {
-            width: 60%;
+            width: 67%;
             height: 20px;
             background-color: #007bff;
             text-align: center;
@@ -87,20 +87,21 @@
         <h1>AJUDA PARA O ENOQUE</h1>
         <p class="urgente">⚠️ URGENTE: Enoque, 6 anos, precisa de medicamento vital – Cada dia conta na luta contra a dor extrema.</p>
 
-        <!-- Vídeo hospedado na pasta videos/ -->
+        <!-- Vídeo com o caminho absoluto para testes -->
         <video class="video-container" controls>
-            <source src="enoque/videos/ajudaenoque.mp4 (2).mp4" type="video/mp4">
-            <source src="videos/enoque.webm" type="video/webm">
-            <source src="videos/enoque.ogg" type="video/ogg">
-            Seu navegador não suporta vídeos.
+            <!-- Usando o caminho absoluto -->
+            <source src="file:///C:/Users/Marcell011/Downloads/enoque/videos/ajudaenoque.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
         </video>
 
         <p class="descricao">Além do tratamento para a doença, o Enoque precisa também de ajuda psicológica ❤️.</p>
         
-        <div class="pix-container" onclick="copiarPix()">PIX: vaquinhaenoque@gmail.com</div>
+        <p><strong>Nome do beneficiário:</strong> Marcelo Carvalho da Silva</p>
+        
+        <div class="pix-container" onclick="copiarPix()">PIX: ajudemoenoque@gmail.com</div>
         
         <div class="barra-progresso">
-            <div class="progresso" id="barra">60%</div>
+            <div class="progresso" id="barra">67%</div>
         </div>
         
         <p>Enoque precisa de <strong>R$ 171.623,54</strong></p>
@@ -111,7 +112,7 @@
 
     <script>
         function copiarPix() {
-            const chavePix = "vaquinhaenoque@gmail.com";
+            const chavePix = "ajudemoenoque@gmail.com";
             navigator.clipboard.writeText(chavePix)
                 .then(() => alert("Chave PIX copiada!"))
                 .catch(err => console.error("Erro ao copiar PIX:", err));
