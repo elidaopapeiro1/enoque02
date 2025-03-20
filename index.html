@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda para Enoque</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #007bff;
+        }
+        .urgente {
+            color: red;
+            font-weight: bold;
+        }
+        .video-container {
+            width: 100%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .descricao {
+            font-size: 16px;
+            margin: 15px 0;
+        }
+        .pix-container {
+            background: #000;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .pix-container:hover {
+            background: #333;
+        }
+        .barra-progresso {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        .progresso {
+            width: 60%;
+            height: 20px;
+            background-color: #007bff;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            line-height: 20px;
+            transition: width 0.5s ease-in-out;
+        }
+        .botao-copiar {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .botao-copiar:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>AJUDA PARA O ENOQUE</h1>
+        <p class="urgente">⚠️ URGENTE: Enoque, 6 anos, precisa de medicamento vital – Cada dia conta na luta contra a dor extrema.</p>
+
+        <!-- Vídeo hospedado na pasta videos/ -->
+        <video class="video-container" controls>
+            <source src="enoque/videos/ajudaenoque.mp4 (2).mp4" type="video/mp4">
+            <source src="videos/enoque.webm" type="video/webm">
+            <source src="videos/enoque.ogg" type="video/ogg">
+            Seu navegador não suporta vídeos.
+        </video>
+
+        <p class="descricao">Além do tratamento para a doença, o Enoque precisa também de ajuda psicológica ❤️.</p>
+        
+        <div class="pix-container" onclick="copiarPix()">PIX: vaquinhaenoque@gmail.com</div>
+        
+        <div class="barra-progresso">
+            <div class="progresso" id="barra">60%</div>
+        </div>
+        
+        <p>Enoque precisa de <strong>R$ 171.623,54</strong></p>
+        <p>Arrecadado: <strong>R$ 162.892,00</strong></p>
+
+        <button class="botao-copiar" onclick="copiarPix()">Copiar Chave PIX</button>
+    </div>
+
+    <script>
+        function copiarPix() {
+            const chavePix = "vaquinhaenoque@gmail.com";
+            navigator.clipboard.writeText(chavePix)
+                .then(() => alert("Chave PIX copiada!"))
+                .catch(err => console.error("Erro ao copiar PIX:", err));
+        }
+    </script>
+
+</body>
+</html>
